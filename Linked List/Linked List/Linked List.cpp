@@ -9,6 +9,22 @@ public:
 		next = NULL;
 	}
 };
+node* reverse(node* head)
+{
+	node* current=head ;
+	node* next=NULL;
+	node* prev=NULL;
+
+	node* nextNode = NULL;
+	while (current != NULL)
+	{
+		next = current->next;
+		next->next = current;
+		prev = current;
+		current = next;
+	}
+	return current;
+}
 // Adding new node 
 void insertAtTail(node* &head, int val)
 {
@@ -184,18 +200,18 @@ int main()
 	insertAtTail(head, 5);
 	insertAtTail(head, 6);
 
-	//displayLinkedList(head);
+	displayLinkedList(head);
 	//cout << "Searching" <<search(head, 2);
 	//deleteANode(head, 2);
 	//deleteAtHead(head, 4);
-	//node* reversed = reverse_k_numberOfLinkedlist(2,head);
-	//cout << "reversed linked list is..\n";
-	//displayLinkedList(reversed);
-	makeACycle(head, 3);
+	node* revers =reverse(head);
+	cout << "reversed linked list is..\n";
+	displayLinkedList(revers);
+	/*makeACycle(head, 3);
 	cout<<"detecting cycle...  "<<detectCycle(head) << endl;
 	removeACycle(head);
 	displayLinkedList(head);
-	cout << "detecting cycle...  " << detectCycle(head) << endl;
+	cout << "detecting cycle...  " << detectCycle(head) << endl;*/
 
 
 }
