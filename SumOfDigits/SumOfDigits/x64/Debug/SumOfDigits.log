@@ -1,0 +1,3 @@
+﻿  SumOfDigits.cpp
+E:\Pucit\Job Prep\DSA\SumOfDigits\SumOfDigits\SumOfDigits.cpp(9): warning C4715: 'sumOfDigits': not all control paths return a value
+  SumOfDigits.vcxproj -> E:\Pucit\Job Prep\DSA\SumOfDigits\x64\Debug\SumOfDigits.exe
